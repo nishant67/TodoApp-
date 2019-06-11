@@ -1,0 +1,18 @@
+<div class="body-block">
+
+  
+  <div class="list-block">
+      <div class ="add-block">
+            <input type="text" class="superhero-input" [(ngModel)]="SuperHeroName">
+            <button class="add-btn" (click)="addSuperhero(SuperHeroName)" >{{Status=="add"?'Add':'Save'}}</button>
+        </div>
+    <div *ngFor="let item of SuperHeroList;let i = index" class="list-items">
+      <h2>{{item.value}}</h2>
+      <div class="btn-panel" >
+          <i class="fas fa-edit position" (click)="editSuperHero(i)"></i>
+          <i class="fas fa-trash-alt position" (click)="deleteSuperHero(i)"></i>
+      </div>
+    </div>
+  </div>
+
+</div>
